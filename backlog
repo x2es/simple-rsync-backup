@@ -1,0 +1,73 @@
+
+Backlog
+=======
+
++Support simple click on Windows
+~Support exclude
+
+LOG
+===
+
+## WIN: 
+install msys2.org
+update pacman by instruction
+
+$ pacman -S rsync ssh
+
+ssh-keygen (with pass)
+ssh-copy-id
+add ssh shortcut
+
+rsync -n --recursive --archive --compress --stats --progress --itemize-changes --log-file=./backup.log --exclude=./backup.log --delete . vagrant@192.168.22.1:~/container_1
+rsync -n --archive --compress --stats --progress --itemize-changes ./backup.log vagrant@192.168.22.1:~/container_1
+
+--Try -zz instead --compress
+
+
+## RSYNC SERVER
+
+setup user with appropriate home
+
+### tips
+
+#### Daemon usage
+
+--daemon                run as an rsync daemon
+--address=ADDRESS       bind to the specified address
+--port=PORT             listen on alternate port 
+--log-file=FILE         override the "log file" setting
+--bwlimit=RATE          limit socket I/O bandwidth
+
+
+#### Regular usage
+
+-n, --dry-run
+-r --recursive
+-a, --archive               archive mode; equals -rlptgoD (no -H,-A,-X)
+  -l --links copy symlinks as symlinks
+  -p --perms preserve
+  -t --times preserve
+  -g --group preserve
+  -o --owner preserve
+  -D same as --devices --specials
+    --devices   preserve devices files
+    --specials  preserve specials files
+
+  --delete                delete extraneous files from dest di
+  -c, --checksum              skip based on checksum, not mod-time & size
+  -W, --whole-file
+  --link-dest=DIR         hardlink to files in DIR when unchanged
+  -z, --compress              compress file data during the transfer
+  --stats                 give some file-transfer stats
+  -h, --human-readable
+  -i, --itemize-changes       output a change-summary for all updates
+  --log-file=FILE         log what we're doing to the specified FILE
+  --list-only             list the files instead of copying them
+  --bwlimit=RATE          limit socket I/O bandwidth
+  --write-batch=FILE      write a batched update to FILE
+  --progress show progress during transfer
+
+$ rsync somehost.mydomain.com::
+  list all the (listable) modules available from a  particular rsync daemon
+
+block rsync-port 873?

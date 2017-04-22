@@ -1,0 +1,1 @@
+start C:\msys32\msys2_shell.cmd -here -c ./backup.sh
