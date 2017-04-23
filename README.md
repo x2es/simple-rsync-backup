@@ -11,7 +11,7 @@ Simple cross-patform rsync backup
  * Install rsync and ssh 
 
 ```bash
-$ pacman -S rsync ssh
+$ pacman -S rsync openssh
 ```
 
 ### Setup ssh config
