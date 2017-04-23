@@ -1,0 +1,1 @@
+C:\msys32\usr\bin\mintty.exe /bin/env CHERE_INVOKING=1 /bin/sh -lc ./%~n1%~x1

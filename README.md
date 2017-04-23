@@ -39,8 +39,7 @@ $ ssh-copy-id backup-server
 
 ### Setup backup config
 
- * Copy `backup.sh` and `backup-launcher.cmd` (windows only) into target folder.
- * For better windows experience instead of `backup-launcher.cmd` you may create shortcut with target: `C:\msys64\msys2_shell.cmd -here -c ./backup.sh`; working dir should point to backup target directory (not suitable for removable devices).
+ * Copy `backup-sample.sh` into target folder as `backup.sh`.
  * Open `backup.sh` and specify correct values for `BACKUP_SERVER` and `CONTAINER`
 
 Examples:
@@ -60,7 +59,12 @@ CONTAINER="family_photos"
  * test in `--dry-run (-n)` mode
  * remove `--dry-run (-n)` options
 
+#### Windows launcher as .sh association
+
+ * copy appropriate 32/64 version of `sh_launcher{32/64}.cmd` as `C:\msys{32/64}\sh_launcher.cmd`
+ * apply appropriate 32/64 version of `msys2_32_sh.reg`
+
 ## Perform backup
 
- * Run `backup.sh` (Linux/Mac) or `backup-launcher.cmd` (Windows)
+ * Run `backup.sh`
  * Follow instructions
