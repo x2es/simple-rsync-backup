@@ -2,7 +2,23 @@
 Simple cross-patform rsync backup
 =================================
 
-## Install & Setup
+## Setup on Server
+
+### Use rsync-3.1.2+
+
+On Ubuntu 14.04 it needed to be complied from sources.
+
+ * Download latest from https://rsync.samba.org/ and unpack
+
+```bash
+$ sudo apt-get install checkinstall
+$ ./configure
+$ make
+$ sudo apt-get remove rsync
+$ sudo checkinstall
+```
+
+## Install & Setup on Client
 
 ### Install on Windows
 
@@ -28,13 +44,12 @@ $ ssh-keygen
 Host backup-server
   HostName backup.srv
   Port 22
-  User backup_user
 ```
 
  * Use `ssh-copy-id` to copy public key to backup server
 
 ```bash
-$ ssh-copy-id backup-server
+$ ssh-copy-id user@backup-server
 ```
 
 ### Setup backup config
@@ -45,14 +60,7 @@ $ ssh-copy-id backup-server
 Examples:
 
 ```bash
-BACKUP_SERVER="backup-server"
-CONTAINER="family_photos"
-```
-
-If no .ssh/config shortcuts defined
-
-```bash
-BACKUP_SERVER="user@some.srv"
+BACKUP_SERVER="user@backup-server"
 CONTAINER="family_photos"
 ```
 
