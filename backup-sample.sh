@@ -13,5 +13,6 @@ read
 rsync --dry-run --recursive --archive $COMPRESS --stats --progress --itemize-changes --log-file=$LOG_FILE --exclude=$LOG_FILE --delete . $BACKUP_SERVER:~/$CONTAINER
 rsync --dry-run --archive $COMPRESS --stats --progress --itemize-changes $LOG_FILE $BACKUP_SERVER:~/$CONTAINER
 
+echo
 echo "Done! (press ENTER to exit)"
 read
