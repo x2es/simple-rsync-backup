@@ -76,3 +76,7 @@ CONTAINER="family_photos"
 
  * Run `backup.sh`
  * Follow instructions
+
+## Exclude paths from backup
+
+Create file named `backup-ignore`
