@@ -1,0 +1,6 @@
+.cache
+.PlayOnLinux
+.rbenv
+.local/share/Trash
+.npm
+.config/google-chrome/Default/Service Worker/CacheStorage
