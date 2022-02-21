@@ -89,4 +89,4 @@ STORAGE="family_photos"
 
 ## Exclude paths from backup
 
-Create file named `backup-ignore`
+Create file named `backup-ignore`. See `backup-ignore-sample` as reference.
