@@ -1,6 +1,14 @@
 CHANGELOG
 =========
 
+## v1.3.0
+
+ * add `snapshot.sh` tool
+ * make backup with snapshot layout when snapshot.sh tool present in source directory
+ * invoke snapshot tool on storage after backup (locally or via ssh)
+ * fix `~/` expansion issue
+ * create target storage unless exist (mkdir -p, unless `--mkpath` become common in distros)
+
 ## v1.2.0
 
  * allow local backup by commenting BACKUP_SERVER=
