@@ -6,6 +6,8 @@ Single-file backup script which lives in the target directory alongside with dat
 
 Backup always simple as invoking `./backup.sh`
 
+NOTE: this is mirror-style backup, everything you have deleted in your working copy would be removed on a backup storage during sync (`rsync --delete` option). It's assumed your are using hard links snapshots on a backup storage if you'd like keep previous files versions.
+
 ## Few concepts
 
 `CONTAINER` is a bunch of data which you'd like to keep together, like your documents or photos.
