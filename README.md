@@ -8,8 +8,9 @@ Backup always simple as invoking `./backup.sh`
 
 ## Few concepts
 
-`CONTAINER` is a bunch of data which you'd like to keep together, like your documents or photos
-`STORAGE` is a place on the backup disk/server keeping multiple **containers**
+`CONTAINER` is a bunch of data which you'd like to keep together, like your documents or photos.
+
+`STORAGE` is a place on the backup disk/server keeping multiple **containers**.
 
 By default **container** name is the current directory name, but you can override it by `CONTAINER=` option.
 
